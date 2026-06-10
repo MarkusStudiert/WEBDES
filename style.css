@@ -1,0 +1,22 @@
+body{
+    height: 960px;
+    width: 1536px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    position: relative;
+    background-image: url(assets/bett.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
+
+}
+
+.bett{
+height = 373px;
+width  = 1200px;
+text-align: center;
+}
