@@ -10,8 +10,6 @@ body {
     overflow: hidden;
 }
 
-/* Hintergrundbild */
-
 #bg {
     position: fixed;
     top: 0;
@@ -28,7 +26,6 @@ body {
     display: block;
 }
 
-/* Inhalt liegt über dem Bild */
 
 #wrapper {
     position: relative;
@@ -36,24 +33,23 @@ body {
     height: 100%;
 }
 
-/* Logo oben in der Mitte */
 
-header {
+#header {
     position: absolute;
     top: 50px;
     left: 0;
     width: 100%;
     text-align: center;
-    z-index: 10;
 }
 
 #gruppen-logo {
+    display: block;
     width: 520px;
     height: auto;
+    margin: 0 auto;
     border: 0;
 }
 
-/* Bereich für die Monster */
 
 #content {
     position: relative;
@@ -61,15 +57,12 @@ header {
     height: 100%;
 }
 
-/* Liste der Monster */
 
 #monster-navigation {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
-/* Grundformat für jedes Monster */
 
 #monster-navigation li {
     position: absolute;
@@ -78,7 +71,6 @@ header {
     text-align: center;
 }
 
-/* Klickbarer Bildbereich */
 
 #monster-navigation a {
     display: block;
@@ -88,7 +80,6 @@ header {
     text-decoration: none;
 }
 
-/* Monsterbild */
 
 #monster-navigation img {
     height: 260px;
@@ -98,7 +89,6 @@ header {
     border: 0;
 }
 
-/* Bildunterschrift unter dem Bild */
 
 #monster-navigation dl {
     width: 190px;
@@ -109,18 +99,14 @@ header {
     text-align: center;
 }
 
-/* Name des Gruppenmitglieds */
-
 #monster-navigation dt {
     margin: 0 0 3px 0;
     padding: 0;
     font-size: 14px;
     font-weight: bold;
     color: #ffffff;
-    text-shadow: 1px 1px 3px #000000;
 }
 
-/* Beschreibung unter dem Namen */
 
 #monster-navigation dd {
     margin: 0;
@@ -128,10 +114,7 @@ header {
     font-size: 11px;
     line-height: 14px;
     color: #dddddd;
-    text-shadow: 1px 1px 3px #000000;
 }
-
-/* Einzelpositionen der Monster unter dem Bett */
 
 #ferhan {
     left: 8%;
@@ -157,9 +140,6 @@ header {
     left: 80%;
     top: 610px;
 }
-
-/* Feinkorrektur der Bildunterschriften */
-/* Nur die Schrift wird verschoben, nicht das Monsterbild */
 
 #tristan dl {
     position: relative;
