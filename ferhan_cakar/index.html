@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="NES History - eine Webseite über die Geschichte einer Kultkonsole.">
+    <meta name="keywords" content="NES, Prüfung">
+    <meta name="author" content="Ferhan Cakar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NES History - Die Geschichte einer Kultkonsole</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!--setzt das Favicon, also das Icon für die Webseite. Erstellt mit favicon.io-->
+
+</head>
+<body>
+    <header id="oben" class="site-header">
+        <div class="branding">
+            <!-- branding fasst die drei NES-Boxen zusammen.
+            span markiert jeweils den einzelnen Buchstaben N, E oder S.
+            small enthält den kleineren Zusatztext unter dem Buchstaben.
+            Die genaue Gestaltung passiert in CSS über .brand-box span und .brand-box small -->
+            <div class="brand-box"><span>N</span><small>Nintendo</small></div>
+            <div class="brand-box"><span>E</span><small>Entertainment</small></div>
+            <div class="brand-box"><span>S</span><small>System</small></div>
+        </div>
+        <h1>NES History</h1>
+        <p>Die Geschichte einer Kultkonsole auf einer Webseite</p>
+    </header>
+
+    <!-- #xxx führt zum Punkt auf der selben Webseite, href gibt das Ziel des Links an-->
+    <nav class="main-nav" aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="#start">Start</a></li>
+            <li><a href="#geschichte">Geschichte</a></li>
+            <li><a href="#spiele">Spiele</a></li>
+            <li><a href="#technik">Technik</a></li>
+            <li><a href="#medien">Medien</a></li>
+            <li><a href="#fazit">Fazit</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Section = großer Themenbereich, article = kleiner Inhaltsbereich -->
+        <section id="start" class="content-section">
+            <h2>Start</h2>
+
+            <div class="hero-section">
+                <article class="text-card">
+                    <!-- strong macht je nach Browser den Text "wichtig" -> in meinem wird der Text fett -->
+                    <p><strong>NES</strong> steht für Nintendo Entertainment System. Die Konsole stammt aus den 1980er-Jahren und steht bis heute für Retro-Gaming, einfache Bedienung und bekannte Spielewelten.</p>
+                    <p>Diese Seite erklärt kurz, warum das NES wichtig war, welche Spiele bekannt wurden und welche Technik hinter der 8-Bit-Konsole steckte.</p>
+                </article>
+                <!--figure wird für ein Bild mit passender Bildbeschreibung genutzt-->
+                <figure class="media-card">
+                    <!--img bindet das Bild über den src-Pfad ein-->
+                    <!--alt beschreibt das Bild, falls es nicht geladen wird oder für Barrierefreiheit-->
+                    <img src="assets/img/nes-Konsole.gif" alt="Platzhalterbild einer NES-Konsole im Retro-Stil">
+                    <!--figcaption ist die sichtbare Bildunterschrift-->
+                    <figcaption>Die ikonischen Controller der Konsole haben auch einiges für unsere heutigen Controller Layouts getan.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="geschichte" class="content-section history-section">
+            <h2>Geschichte</h2>
+            <p class="section-intro">Die wichtigsten Stationen werden bewusst knapp dargestellt, damit die Seite übersichtlich bleibt.</p>
+            <div class="timeline">
+                <!-- die Article werden automatisch nach reihnfolge den verfügbaren collums in Grid layout hinzugefügt, wobei in css repeat 2 sagt, dass es immer 2 spalten pro reihe sein dürfen-->
+                <article>
+                    <h3>1983 - Start in Japan</h3>
+                    <p>In Japan erschien Nintendos Heimkonsole zunächst unter einem anderen Namen. Aus dieser Grundlage entstand später das NES.</p>
+                </article>
+                <article>
+                    <h3>1985 - Neustart des Heimkonsolenmarktes</h3>
+                    <p>Mit dem NES wurde Videospielen im Wohnzimmer wieder mehr Vertrauen geschenkt. Das klare System aus Konsole, Controller und Modulen war leicht verständlich.</p>
+                </article>
+                <article>
+                    <h3>1986 - Verbreitung in Europa</h3>
+                    <p>Auch in Europa wurde das NES bekannt. Viele Spielerinnen und Spieler verbanden die Konsole mit einfachen, direkten Spielideen.</p>
+                </article>
+                <article>
+                    <h3>Heute - Kultstatus</h3>
+                    <p>Das NES gilt als Symbol für Retro-Gaming. Design, Sounds und Spiele werden noch immer wiedererkannt.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="spiele" class="content-section games-section">
+            <h2>Bekannte Spiele</h2>
+            <p class="section-intro">Die folgenden Beispiele zeigen, wie unterschiedlich NES-Spiele sein konnten.</p>
+            <div class="game-grid">
+                <article class="game-card">
+                    <h3>Super Mario Bros</h3>
+                    <p>Der Begin der wohl beliebtesten Jump and Run Abenteuerreihe, welcher heute noch viele Fans hat.</p>
+                    <img class="game-image" src="assets/img/mario.webp" alt="Bild zu Super Mario Bros.">
+                </article>
+                <article class="game-card">
+                    <h3>The Legend of Zelda</h3>
+                    <p>Eine Spielwelt, die das Sammeln und erkunden in Videospielen auf ein neues Level gebracht hat.</p>
+                    <img class="game-image" src="assets/img/zelda.webp" alt="Bild zu The Legend of Zelda.">
+                </article>
+                <article class="game-card">
+                    <h3>Metroid</h3>
+                    <p>Ein Actionspiel mit Labyrinth-Struktur und besonderer Atmosphäre, die bis heute geschätzt wird.</p>
+                    <img class="game-image" src="assets/img/metroid.webp" alt="Bild zu Metroid.">
+                </article>
+            </div>
+        </section>
+
+        <section id="technik" class="content-section split-section">
+            <article>
+                <h2>Technik</h2>
+                <h3>8-Bit-Konsole</h3>
+                <p>Das NES wird oft als DIE 8-Bit-Konsole bezeichnet. Aufgrund dieser limitierung wirkt die Grafik einfach, klar und pixelartig.</p>
+                <h3>Controller</h3>
+                <p>Der rechteckige Controller hatte ein Steuerkreuz, zwei Aktionstasten sowie Start und Select. Dadurch war er sehr übersichtlich.</p>
+                <h3>Module</h3>
+                <p>Spiele wurden nicht heruntergeladen, sondern als Module in die Konsole gesteckt. Das Modul war damit ein wichtiger Teil des Spielerlebnisses.</p>
+            </article>
+            <!-- aside ist ein ergänzender Inhaltsbereich neben dem Text.
+            Hier wird das SVG-Icon als Zusatz zum Technikbereich angezeigt.
+            aria-label beschreibt den Bereich für Barrierefreiheit. -->
+            <aside class="svg-card" aria-label="SVG-Icon eines NES-Controllers">
+                <h3>SVG-Icon eines NES-Controllers</h3>
+                <img src="assets/svg/controller.svg" alt="Controller-Icon als SVG">
+                <details class="referenz-hinweis">
+                    <summary>KI-Erstellungshinweis</summary>
+                    <p>Danke Nawid, dass du mir gezeigt hast, wie man dieses Dropdown hier erstellt. Das Icon wurde mit Chat GPT 5.5 Premium, Intelligenz hoch  erstellt. Prompt: "Erstelle mir bitte ein SVG-Icon eines NES-Controllers aus frontaler ansicht. Achte hierbei auf korrekte Farbgebung."</p>
+                </details>
+            </aside>
+        </section>
+
+        <section id="medien" class="content-section media-section">
+            <h2>Medien</h2>
+            <p class="section-intro">Dieser Bereich bindet die geforderten HTML5-Medien und Zusatzdateien ein.</p>
+            <div class="media-grid">
+                <article>
+                    <h3>Canvas 2D Animation</h3>
+                    <!--erstellt eine leere Fläche, die dann in real Time beschrieben wird, anders als Pfade von anderen Assets-->
+                    <canvas id="pixelCanvas" width="320" height="160">Ihr Browser unterstützt das Canvas-Element nicht.</canvas>
+                    <p>Die kleine Pixelanimation wird mit JavaScript auf Canvas gezeichnet. Sie zeigt, wie man ein Modul einsteckt, WOW!!! </p>
+                    <details class="referenz-hinweis">
+                        <summary>KI-Erstellungshinweis</summary>
+                        <p>Danke Nawid, dass du mir gezeigt hast, wie man dieses Dropdown hier erstellt. Der Code wurde mit Google Gemeni 3.1 Pro erstellt. Prompt: "Erstelle mir bitte eine Canvas Animation einer NES Konsole, in die ein Modul gesteckt wird."</p>
+                    </details>
+                </article>
+                <article>
+                    <h3>Die Audio meiner Kindheit</h3>
+                    <audio controls> <!--erstellt UI für Audio-->
+                        <source src="assets/audio/Gamecube-Startup-Sound.m4a" type="audio/mp4"> <!--m4a ist in mp4 container, deshalb hier mp4-->
+                        Ihr Browser unterstützt das Audio-Element nicht. <!--falls Browser Element nicht unterstützt kommt Text-->
+                    </audio>
+                    <p>Das NES selbst hatte nie einen Startup Sound, deshalb ist hier nun der Startup Sound, der meine Kindheit geprägt hat.</p>
+                </article>
+                <article>
+                    <h3>Video</h3>
+                    <!--controls macht UI, poster macht vorschaubild-->
+                    <video controls poster="assets/img/video-poster.png" width="320">
+                        <source src="assets/video/WEBM-World6-1.webm" type="video/webm">
+                        <source src="assets/video/MP4-World6-1.mp4" type="video/mp4">
+                        <source src="assets/video/MOV-World6-1.mov" type="video/mov">
+                        Ihr Browser unterstützt das Video-Element nicht.
+                    </video>
+                    <p>So sieht das wohl legendärste Spiel der Konsole aus.</p>
+                </article>
+                <article>
+                    <h3>PDF</h3>
+                    <p>Das Faktenblatt ist eine zusammenfassung der wichtigsten Informationen über die Konsole.</p>
+                    <!--a macht hier einen Link draus-->
+                    <!--folgendes geht den Pfad lang und downloaded, falls möglich-->
+                    <p><a class="button-link" href="assets/pdf/nes-faktenblatt.pdf" download>NES-Faktenblatt herunterladen</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="fazit" class="content-section conclusion-section">
+            <h2>Fazit</h2>
+            <p>Das NES verbindet Technikgeschichte, bekannte Spiele und einen ikonischen Stil. Doch das wichtigste, das NES birgt Erinnerungen. Erinnerungen an eine vergangene Zeit, in dennen man gerne schwelgt.</p>
+            <p><a href="#oben">Zurück nach oben</a></p>
+        </section>
+    </main>
+
+    <!-- footer enthält den unteren Abschlussbereich der Webseite -->
+    <footer class="site-footer">
+        <p>&copy; <!--© wird damit eingefügt--> 2026 - NES History. Projekt Webdesign. Ferhan Cakar</p>
+    </footer>
+    <!-- script bindet die externe JavaScript-Datei für die Canvas-Animation ein -->
+    <script src="js/canvas.js"></script>
+</body>
+</html>
