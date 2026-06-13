@@ -10,6 +10,12 @@ body {
     line-height: 1.6; /*Zeilenhöhe*/
     color: #f5f5f5; /*Textfarbe*/
     background: #111111; /*Hintergrundfarbe*/
+    display: grid; /*legt die sichtbare Reihenfolge fest, ohne die HTML-Reihenfolge nutzen zu müssen*/
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
 }
 
 /*assets können nie Breiter als ihre Container werden*/
@@ -19,6 +25,7 @@ img, video, canvas, audio {
 
 /* Kopfbereich */
 .site-header {
+    grid-area: header; /*setzt den Header im Grid ganz nach oben*/
     min-height: 420px;
     padding: 48px 6% 36px 6%; /*abstand zum rand der Box, Werte verteilt oben, rechts, unten, links*/
     text-align: center;
@@ -85,6 +92,7 @@ img, video, canvas, audio {
 /*nav = Navigationsbereich*/
 /*li  = einzelner Listenpunkt*/
 .main-nav {
+    grid-area: nav; /*zeigt die Navigation trotz späterer HTML-Position direkt unter dem Header*/
     position: sticky;/*bleibt nach dem vorbei scrollen da*/
     top: 0;
     background: #222222;
@@ -119,6 +127,10 @@ img, video, canvas, audio {
 }
 
 /* Bereiche */
+
+main {
+    grid-area: main; /*setzt den Hauptinhalt im Grid unter die Navigation*/
+}
 
 /* wenn klassen so untereinander geschrieben werden gilt die beschreibung der Klasse für alle klassen, die so geschrieben sind
 warum? wenn ich später eine Bestimmte klasse anders anpassen möchte nehme ich die hier raus, sonnst ist das eine Vorlage
@@ -317,6 +329,7 @@ canvas {
 
 /* Gestaltung des unteren Abschlussbereichs */
 .site-footer {
+    grid-area: footer; /*setzt den Footer im Grid unter den Hauptinhalt*/
     padding: 28px 6%;
     text-align: center;
     background: #090909;
