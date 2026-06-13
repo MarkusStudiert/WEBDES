@@ -1,0 +1,346 @@
+/* Grundgestaltung */
+/* box-sizing: border-box sorgt dafür, dass padding und border in die Gesamtbreite eingerechnet werden */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; /*Außenabstand = 0*/
+    font-family: 'Times new Roman', Helvetica, sans-serif;
+    line-height: 1.6; /*Zeilenhöhe*/
+    color: #f5f5f5; /*Textfarbe*/
+    background: #111111; /*Hintergrundfarbe*/
+}
+
+/*assets können nie Breiter als ihre Container werden*/
+img, video, canvas, audio {
+    max-width: 100%;
+}
+
+/* Kopfbereich */
+.site-header {
+    min-height: 420px;
+    padding: 48px 6% 36px 6%; /*abstand zum rand der Box, Werte verteilt oben, rechts, unten, links*/
+    text-align: center;
+    background: 
+        linear-gradient(135deg, transparent 0%, transparent 70%, #d82424 100%),
+        linear-gradient(135deg, #2e86de 0%, transparent 30%, transparent 100%),
+        linear-gradient(135deg, #151515 0%, #292929 60%, #151515 100%);
+        /*Mehrere Verläufe liegen übereinander. 135deg ist der schräge Winkel des Verlaufs.
+        Die %-Werte sind Positionen im Verlauf: 0% = Anfang, 100% = Ende.
+        transparent ist durchsichtig, damit die darunterliegenden Farben sichtbar bleiben.
+        deg zeigt in einem kreis an, in welche richtung der strich geht*/
+    border-bottom: 6px solid #d82424; /*Rand unten*/
+}
+
+.branding {
+    display: flex; /*wenn die div container untereinander geschrieben werden wird hier die Breite größer -> sieht besser aus */
+    justify-content: center; /*Horizontal mittig im container Platzieren*/
+    gap: 24px; /* Abstand zwischen den Elementen */
+    margin-bottom: 30px; /*unten 30px abstand*/
+}
+
+.brand-box {
+    width: 170px; /*feste Breite bei normaler ansicht*/
+    min-height: 130px;
+    padding: 18px; /*überall 18px abstand*/
+    border: 3px solid #d82424; /*erstellt Rand*/
+    background: #e5e5e5;
+    color: #181818;
+    box-shadow: 8px 8px 0 #000000; /* Schatten: 8px rechts, 8px nach unten, 0px weich, Farbe */
+    transform: skew(-4deg); /* kippt die Box leicht schräg für den Retro-Look -> box = trapez*/
+}
+
+/*für die großen Buchstaben*/
+.brand-box span {
+    display: block; /* sorgt dafür, dass Buchstabe und Text untereinander stehen */
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/*Für die kleinen Texte*/
+.brand-box small {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 1px; /* erhöht den Abstand zwischen den Buchstaben */
+    text-transform: uppercase;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 48px;
+    text-transform: uppercase; /*immer groß schreiben*/
+    letter-spacing: 3px; /* erhöht den Abstand zwischen den Buchstaben */
+}
+
+.site-header p {
+    max-width: 720px;
+    margin: 16px auto 0 auto;
+    font-size: 20px;
+}
+
+/* Navigation */
+/*nav = Navigationsbereich*/
+/*li  = einzelner Listenpunkt*/
+.main-nav {
+    position: sticky;/*bleibt nach dem vorbei scrollen da*/
+    top: 0;
+    background: #222222;
+    border-bottom: 3px solid #d82424;
+}
+
+/*ul  = ungeordnete Liste*/
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap; /* erlaubt Umbruch, falls die Navigationspunkte nicht mehr nebeneinander passen */
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none; /* entfernt die Aufzählungspunkte der Liste */
+}
+
+/*a   = anklickbarer Link*/
+.main-nav a {
+    display: block;
+    padding: 16px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px; /* erhöht den Abstand zwischen den Buchstaben */
+}
+
+.main-nav a:hover,
+.main-nav a:focus /*bei Tastaturauswahl*/{
+    background: #d82424;
+    color: #ffffff;
+}
+
+/* Bereiche */
+
+/* wenn klassen so untereinander geschrieben werden gilt die beschreibung der Klasse für alle klassen, die so geschrieben sind
+warum? wenn ich später eine Bestimmte klasse anders anpassen möchte nehme ich die hier raus, sonnst ist das eine Vorlage
+Wenn ich die selbe sache regle zählt der Inhalt der später vorkommenden Klasse
+Sonnst kann man für die klassen selbst auch die Regeln verfeinern*/
+.history-section,
+.games-section,
+.content-section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 70px 6%;
+    border-bottom: 1px solid #333333;
+}
+
+.content-section h2 {
+    margin-top: 0;
+    font-size: 34px;
+    color: #ffffff;
+    border-left: 10px solid #d82424;
+    padding-left: 16px;
+    text-transform: uppercase;
+}
+
+.content-section h3 {
+    color: #ffdd55;
+}
+
+.section-intro {
+    max-width: 820px;
+    color: #dddddd;
+}
+
+/* hier wird entschieden, dass die beiden Boxen in start nebeneinander stehen, gap von 32px haben und gecentered werden*/
+.hero-section,
+.split-section {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.text-card,
+.media-card,
+.game-card,
+.media-grid article,
+.svg-card,
+.timeline article {
+    background: #2a2a2a;
+    border: 2px solid #595959; 
+    border-radius: 10px; /*abgerundete ecke -> je höher die Zahl, desto rundlicher*/
+    padding: 24px;
+    box-shadow: 0 8px 0 #090909;
+}
+
+.text-card,
+.media-card,
+.split-section article,
+.svg-card {
+    flex: 1; /* Elemente teilen sich im Flex-Container den verfügbaren Platz gleichmäßig */
+}
+
+.media-card figcaption {
+    color: #cccccc;
+    font-size: 14px;
+    margin-top: 10px; /* Abstand zwischen Bild und Bildunterschrift */
+}
+
+/* Geschichte */
+.timeline {
+    display: grid; /*aktiviert Rastermodell für die 4 Sections*/
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    /*Es gibt zwei gleich breite Spalten. repeat 2 heißt 2 mal das selbe. Min 0 bleit, max 1fr, also 2mal 1fr, also 1 von 2 fractions breit max*/
+    /*so ist es viel flexibler gestaltet*/
+    gap: 24px; /*abstand dazwichen*/
+}
+
+
+/*Die ungraden Elemente bekommen einen blauen Rand, angelehnt an die Nintendo Switch*/
+/*
+.timeline article:nth-child(1) {
+    border-left: 8px solid #2e86de; 8px Breit, nicht Formbar
+}
+.timeline article:nth-child(3) {
+    border-left: 8px solid #2e86de;
+}
+*/
+.timeline article:nth-child(odd) {
+    border-left: 8px solid #2e86de;
+}
+
+/*Die graden Elemente bekommen einen roten Rand, angelehnt an die Nintendo Switch*/
+/*
+.timeline article:nth-child(2) {
+    border-right: 8px solid #d82424;
+}
+.timeline article:nth-child(4) {
+    border-right: 8px solid #d82424;
+}
+*/
+.timeline article:nth-child(even) {
+    border-right: 8px solid #d82424;
+}
+
+/* Spiele */
+.game-grid,
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px; /* Abstand zwischen den Elementen */
+    /*Es gibt drei gleich breite Spalten. repeat 3 heißt 3 mal das selbe. Min 0 brleit, max 1fr, also 3mal 1fr, also 1 von 3 fractions breit max*/
+    /*so ist es viel flexibler gestaltet*/
+}
+
+/* der übergang von nicht hovern zu hovern .game-card und .game-card:hover
+dauert 0.5 sek/1 sek, ease macht langsam start-> schneler am ende der animation
+translateY -> auf y achse 8px nach oben (-)
+*/
+.game-card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease, border-color 1s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    border-color: #d82424;
+}
+
+.game-image {
+    display: block;
+    width: 100%; /*breite des conainers, in dem das Bild sein wird ist über die ganze Box*/
+    height: 160px; /*alle Bilder bekommen die selbe höhe*/
+    margin-top: auto; 
+    object-fit: cover; /*sorgt dafür, dass das Bild sauber gefüllt wird, ohne verzerrt zu werden. Es kann aber am Rand etwas abgeschnitten werden.*/
+    border: 2px solid #ffdd55;
+    border-radius: 6px;
+    background: #000000;
+}
+
+/* SVG und Medien */
+.svg-card img {
+    display: block; /*img elemente verhalten sich eigentlich wie Text -> arbeit mit margin usw. schwer -> Block macht einen Block aus img -> verhalten einfacher beeinflussbar*/
+    margin: 0 auto; /*oben/unten 0 abstand, links/rechts automatisch gleicher abstand*/
+    max-width: 320px; /*vorher mit max-width auf den container beschränkt*/
+}
+
+/*für das Dropdown werden folgende 3 Klassen benutzt.*/
+.referenz-hinweis {
+    font-size: 12px;
+    color: #9a9a9a;
+    line-height: 1.4;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+ 
+.referenz-hinweis summary {
+    cursor: pointer;
+    color: #9a9a9a;
+}
+ 
+.referenz-hinweis p {
+    color: #9a9a9a;
+    margin-top: 8px;
+}
+
+/*das hier ist Kaskade -> vorher wurde media-grid mit 3 spalten ertsellt, hier wird es überschrieben*/
+.media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /*2 gleich große spalten*/
+}
+
+canvas {
+    display: block; /*canvas wird wie block behandelt*/
+    background: #050505;
+    border: 3px solid #d82424;
+}
+
+/*lässt es aussehen, wie ein Button*/
+.button-link, /*alle aus dieser Klasse*/
+.conclusion-section a /*alle Links (a) aus dieser Klasse*/{
+    display: inline-block; /*inline wird behandelt wie ein block -> bewegbar*/
+    padding: 12px 18px; /*12 oben/unten, 18 links/rechts*/
+    background: #d82424;
+    color: #ffffff;
+    text-decoration: none; /*Links werden nicht mehr unterstrichen*/
+    font-weight: bold; /*fetter Text*/
+    border-radius: 6px; /*Ecken abrunden*/
+}
+
+/*Farben ändern wenn man hier ist*/
+.button-link:hover,
+.button-link:focus, /*bei Tastaturauswahl*/
+.conclusion-section a:hover,
+.conclusion-section a:focus /*bei Tastaturauswahl*/{
+    background: #ffdd55;
+    color: #111111;
+}
+
+/* Gestaltung des unteren Abschlussbereichs */
+.site-footer {
+    padding: 28px 6%;
+    text-align: center;
+    background: #090909;
+    color: #bbbbbb;
+}
+
+/*Beingt Webseite auf ein Printfreundliches Format*/
+/*einfach, weil ich mich reingearbeitet habe füge ich es auch hier ein ;)*/
+@media print {
+    /*Text schwarz, Hintergrund weiß -> Druckerfreundlicher*/
+    body {
+        color: #000000;
+        background: #ffffff;
+    }
+
+    /*Elemente, die auf gedruckter Form keinen Sinn ergeben werden ausgeblendet*/
+    .main-nav, /*Nav. Leiste*/
+    audio,
+    video,
+    canvas{
+        display: none;
+    }
+    /*Trennlinien zwichen Sections werden Heller gemacht -> schöner auf print*/
+    .content-section {
+        border-bottom: 1px solid #999999;
+    }
+}

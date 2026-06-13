@@ -1,0 +1,38 @@
+<svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+    <!-- Selbst erstelltes SVG-Icon: NES-Controller -->
+
+    <!-- Schatten -->
+    <rect x="55" y="125" width="210" height="12" rx="6" fill="#000000" opacity="0.35"/>
+
+    <!-- Controller-Grundform -->
+    <rect x="45" y="45" width="230" height="85" rx="8" ry="8"
+          fill="#d9d9d9" stroke="#111111" stroke-width="4"/>
+
+    <!-- dunkle Frontfläche -->
+    <rect x="63" y="62" width="194" height="50" rx="4" ry="4"
+          fill="#222222"/>
+
+    <!-- linke graue Fläche -->
+    <rect x="72" y="70" width="58" height="34" rx="3" ry="3"
+          fill="#777777"/>
+
+    <!-- Steuerkreuz -->
+    <rect x="94" y="74" width="14" height="26" fill="#111111"/>
+    <rect x="88" y="80" width="26" height="14" fill="#111111"/>
+
+    <!-- mittlere graue Fläche -->
+    <rect x="140" y="75" width="48" height="28" rx="3" ry="3"
+          fill="#777777"/>
+
+    <!-- Select und Start -->
+    <rect x="146" y="87" width="15" height="6" rx="3" ry="3" fill="#111111"/>
+    <rect x="167" y="87" width="15" height="6" rx="3" ry="3" fill="#111111"/>
+
+    <!-- rechte graue Fläche -->
+    <rect x="202" y="70" width="45" height="34" rx="3" ry="3"
+          fill="#777777"/>
+
+    <!-- A- und B-Knöpfe -->
+    <circle cx="216" cy="87" r="9" fill="#d82424" stroke="#111111" stroke-width="3"/>
+    <circle cx="235" cy="87" r="9" fill="#d82424" stroke="#111111" stroke-width="3"/>
+</svg>
