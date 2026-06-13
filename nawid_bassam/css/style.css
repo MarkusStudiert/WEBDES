@@ -25,7 +25,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     /* Hintergrundfarbe der gesamten Seite */
-    background-color: #111111;
+    background-color: #1a1a1a;
 
     /* Standard-Textfarbe */
     color: #f3efe7;
@@ -52,7 +52,7 @@ body {
     position: relative;
 
     min-height: 420px;
-    background-color: #111111;
+    background-color: #1a1a1a;
     border-bottom: 4px solid #c9a24d;
 
     /* Flexbox zentriert den Text horizontal und vertikal */
