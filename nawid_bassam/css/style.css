@@ -1,0 +1,615 @@
+/* ================================
+   Grundlayout
+   Projekt: Nawids Duft- und Autowelt
+   Autor: Nawid Bassam
+   ================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111111;
+    color: #f3efe7;
+    line-height: 1.6;
+}
+
+/* Wrapper umschließt die komplette Seite */
+#wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    min-height: 100vh;
+}
+
+/* ================================
+   Header
+   ================================ */
+
+#header {
+    position: relative;
+    min-height: 420px;
+    background-color: #111111;
+    border-bottom: 4px solid #c9a24d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 30px;
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: 0;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.62);
+    z-index: 1;
+}
+
+.header-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.claim {
+    color: #c9a24d;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    color: #c9a24d;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* ================================
+   Navigation
+   ================================ */
+
+#navigation {
+    background-color: #2e2e2e;
+    border-bottom: 2px solid #c9a24d;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#navigation li {
+    margin: 0;
+}
+
+#navigation a {
+    display: block;
+    padding: 16px 18px;
+    color: #f3efe7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navigation a:hover,
+#navigation a:focus {
+    background-color: #c9a24d;
+    color: #000000;
+    outline: none;
+}
+
+/* ================================
+   Content-Bereiche
+   ================================ */
+/* Kleine Referenzhinweise zu verwendeten Hilfsmitteln */
+.referenz-hinweis {
+    font-size: 12px;
+    color: #9a9a9a;
+    line-height: 1.4;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.referenz-hinweis summary {
+    cursor: pointer;
+    color: #9a9a9a;
+}
+
+.referenz-hinweis p {
+    color: #9a9a9a;
+    margin-top: 8px;
+}
+
+/* Präsentere Beschreibungstexte der Medienbereiche */
+.medien-text {
+    font-size: 16px;
+    color: #f3efe7;
+    margin-bottom: 14px;
+}
+
+#content {
+    padding: 30px;
+}
+
+.bereich {
+    background-color: #242424;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-left: 5px solid #c9a24d;
+    border-radius: 10px;
+}
+
+.bereich p {
+    color: #f3efe7;
+}
+
+/* Karten für Autos, Parfums und Düfte */
+.karte {
+    background-color: #151515;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    padding: 24px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.karte:hover {
+    border-color: #c9a24d;
+}
+
+/* Bereich für die drei Düfte */
+.duft-liste {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.duft-liste .karte {
+    flex: 1 1 250px;
+}
+
+/* ================================
+   Medien: Bilder, SVG, Canvas, Audio, Video
+   ================================ */
+
+img,
+video,
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+canvas {
+    display: block;
+    background-color: #0c0c0c;
+    border: 2px solid #c9a24d;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+video {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #c9a24d;
+    border-radius: 10px;
+    background-color: #000000;
+}
+
+/* ================================
+   Button / PDF-Download
+   ================================ */
+
+.button {
+    display: inline-block;
+    background-color: #c9a24d;
+    color: #000000;
+    padding: 14px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* ================================
+   Footer
+   ================================ */
+
+#footer {
+    background-color: #000000;
+    color: #f3efe7;
+    text-align: center;
+    padding: 24px;
+    border-top: 2px solid #c9a24d;
+}
+
+/* ================================
+   Barrierearme Fokus-Markierung
+   ================================ */
+
+a:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* ================================
+   Responsive Anpassung
+   ================================ */
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    #content {
+        padding: 20px;
+    }
+
+    .bereich {
+        padding: 22px;
+    }
+
+    #navigation ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #navigation a {
+        text-align: center;
+        border-bottom: 1px solid #222222;
+    }
+}
+
+
+/* ================================
+   Detailkarten für Xerjoff x Lamborghini Düfte
+   ================================ */
+
+.duft-liste {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.duft-detail-karte {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+}
+
+/* Der direkte Beschreibungstext unter der Duft-Überschrift bekommt überall gleiche Höhe */
+.duft-detail-karte > p {
+    min-height: 120px;
+}
+
+/* Innere Box für Bild + Duftinfos */
+.duft-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #101010;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    flex: 1;
+}
+
+/* Alle Duftbilder gleich groß und sauber ausgerichtet */
+.duft-bild {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    background-color: #000000;
+    border-radius: 10px;
+    border: 1px solid #444444;
+    padding: 10px;
+}
+
+.duft-infos {
+    flex: 1;
+}
+
+/* Duftrichtung soll bei allen Karten gleich hoch wirken */
+.duftrichtung-liste {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    min-height: 90px;
+}
+
+.duftrichtung-liste li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f3efe7;
+    font-size: 15px;
+}
+
+.duft-infos h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #c9a24d;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.duft-infos h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.duftpunkt {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.fruchtig {
+    background-color: #f48ac2;
+}
+
+.suess {
+    background-color: #ba95f2;
+}
+
+.cremig {
+    background-color: #d7d4c9;
+}
+
+.ledrig {
+    background-color: #ae8faa;
+}
+
+.wuerzig {
+    background-color: #9dbbb3;
+}
+
+.aquatisch {
+    background-color: #7fd3e8;
+}
+
+.synthetisch {
+    background-color: #9ab3e8;
+}
+
+.holzig {
+    background-color: #d99882;
+}
+
+.zitrus {
+    background-color: #e8df46;
+}
+
+.frisch {
+    background-color: #7da7f2;
+}
+
+.duftpyramide-block {
+    background-color: #181818;
+    border-left: 4px solid #c9a24d;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.duftpyramide-block p {
+    margin: 0;
+    color: #f3efe7;
+}
+
+/* Responsive Anpassung für Duftkarten */
+@media screen and (max-width: 800px) {
+    .duft-liste {
+        flex-direction: column;
+    }
+
+    .duft-detail-karte > p {
+        min-height: auto;
+    }
+
+    .duft-bild {
+        height: auto;
+    }
+
+    .duftrichtung-liste {
+        min-height: auto;
+    }
+}
+
+/* ================================
+   Markenkarte Xerjoff und Roberto Ugolini
+   ================================ */
+
+.markenkarte {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.marken-text {
+    flex: 1;
+}
+
+.markenlogo {
+    width: 120px;
+    max-width: 120px;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #444444;
+    flex-shrink: 0;
+}
+
+/* Responsive: Logo unter den Text setzen */
+@media screen and (max-width: 800px) {
+    .markenkarte {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .markenlogo {
+        margin-top: 10px;
+    }
+}
+
+/* ================================
+   Auto-Karten
+   ================================ */
+
+.auto-karten {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.auto-karten {
+    flex: 1 1 420px;
+    background-color: #151515;
+    border: 1px solid #3a3a3a;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.auto-karten:hover {
+    border-color: #c9a24d;
+}
+
+.auto-bild {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+    background-color: #f3efe7;
+}
+
+.auto-inhalt {
+    padding: 24px;
+}
+
+.auto-marke {
+    color: #c9a24d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+}
+
+.auto-daten {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0 0 0;
+}
+
+.auto-daten div {
+    background-color: #101010;
+    border-left: 3px solid #c9a24d;
+    padding: 10px 12px;
+    border-radius: 6px;
+}
+
+.auto-daten dt {
+    color: #9a9a9a;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.auto-daten dd {
+    color: #f3efe7;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Responsive Auto-Cards */
+@media screen and (max-width: 800px) {
+    .auto-daten {
+        grid-template-columns: 1fr;
+    }
+
+    .auto-bild {
+        height: auto;
+    }
+}
