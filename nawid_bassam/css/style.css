@@ -1,27 +1,40 @@
-/* ================================
+/* 
    Grundlayout
    Projekt: Nawids Duft- und Autowelt
    Autor: Nawid Bassam
-   ================================ */
+*/
 
+/* *: Spricht alle HTML-Elemente an */
 * {
+    /* box-sizing: border-box sorgt dafür, dass padding und border in die Breite eingerechnet werden */
     box-sizing: border-box;
 }
 
+/* html: Grundelement der Webseite */
 html {
+    /* scroll-behavior: smooth sorgt für weiches Scrollen bei Sprunglinks */
     scroll-behavior: smooth;
 }
 
+/* body: Sichtbarer Hauptbereich der Webseite */
 body {
     margin: 0;
     padding: 0;
+
+    /* font-family: Standardschrift für die Webseite */
     font-family: Arial, Helvetica, sans-serif;
+
+    /* Hintergrundfarbe der gesamten Seite */
     background-color: #111111;
+
+    /* Standard-Textfarbe */
     color: #f3efe7;
+
+    /* line-height: Abstand zwischen Textzeilen */
     line-height: 1.6;
 }
 
-/* Wrapper umschließt die komplette Seite */
+/* #wrapper: Umschließt die komplette Seite und begrenzt die Breite */
 #wrapper {
     max-width: 1100px;
     margin: 0 auto;
@@ -29,34 +42,50 @@ body {
     min-height: 100vh;
 }
 
-/* ================================
+/*
    Header
-   ================================ */
+*/
 
+/* #header: Kopfbereich mit Hintergrundvideo */
 #header {
+    /* position: relative dient als Bezugspunkt für absolute Elemente im Header */
     position: relative;
+
     min-height: 420px;
     background-color: #111111;
     border-bottom: 4px solid #c9a24d;
+
+    /* Flexbox zentriert den Text horizontal und vertikal */
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
     padding: 40px 30px;
+
+    /* overflow: hidden verhindert, dass das Video aus dem Header herausragt */
     overflow: hidden;
 }
 
+/* .header-video: Video liegt als Hintergrund im Header */
 .header-video {
+    /* absolute nimmt das Video aus dem normalen Layoutfluss */
     position: absolute;
+
+    /* top/left + width/height lassen das Video den ganzen Header ausfüllen */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
+    /* object-fit: cover füllt den Bereich ohne Verzerrung */
     object-fit: cover;
+
+    /* z-index 0 legt das Video ganz nach hinten */
     z-index: 0;
 }
 
+/* .header-overlay: Dunkle Schicht über dem Video */
 .header-overlay {
     position: absolute;
     top: 0;
@@ -64,16 +93,25 @@ body {
     width: 100%;
     height: 100%;
 
+    /* rgba: Schwarz mit Transparenz für bessere Lesbarkeit */
     background-color: rgba(0, 0, 0, 0.62);
+
+    /* Overlay liegt über dem Video, aber unter dem Text */
     z-index: 1;
 }
 
+/* .header-text: Text im Header */
 .header-text {
+    /* relative hält den Text im normalen Flexbox-Layout */
     position: relative;
+
+    /* z-index 2 legt den Text vor Video und Overlay */
     z-index: 2;
+
     max-width: 800px;
 }
 
+/* .claim: Kleiner Slogan über der Hauptüberschrift */
 .claim {
     color: #c9a24d;
     font-weight: bold;
@@ -82,6 +120,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* h1: Hauptüberschrift der Webseite */
 h1 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 48px;
@@ -89,6 +128,7 @@ h1 {
     margin: 0 0 20px 0;
 }
 
+/* h2: Abschnittsüberschriften */
 h2 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 32px;
@@ -96,42 +136,55 @@ h2 {
     margin-top: 0;
 }
 
+/* h3: Unterüberschriften in Karten */
 h3 {
     font-family: Georgia, "Times New Roman", serif;
     color: #ffffff;
     margin-top: 0;
 }
 
-/* ================================
+/*
    Navigation
-   ================================ */
+*/
 
+/* #navigation: Navigationsleiste */
 #navigation {
     background-color: #2e2e2e;
     border-bottom: 2px solid #c9a24d;
 }
 
+/* #navigation ul: Liste der Navigationspunkte */
 #navigation ul {
+    /* list-style-type: none entfernt Aufzählungspunkte */
     list-style-type: none;
+
     margin: 0;
     padding: 0;
+
+    /* Flexbox ordnet die Menüpunkte nebeneinander an */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* #navigation li: Einzelner Navigationspunkt */
 #navigation li {
     margin: 0;
 }
 
+/* #navigation a: Navigationslinks */
 #navigation a {
     display: block;
     padding: 16px 18px;
     color: #f3efe7;
+
+    /* text-decoration: none entfernt die Unterstreichung */
     text-decoration: none;
+
     font-weight: bold;
 }
 
+/* :hover reagiert auf Mausberührung, :focus auf Tastaturauswahl */
 #navigation a:hover,
 #navigation a:focus {
     background-color: #c9a24d;
@@ -139,10 +192,11 @@ h3 {
     outline: none;
 }
 
-/* ================================
+/*
    Content-Bereiche
-   ================================ */
-/* Kleine Referenzhinweise zu verwendeten Hilfsmitteln */
+*/
+
+/* .referenz-hinweis: Kleine graue Hinweise zu verwendeten Tools */
 .referenz-hinweis {
     font-size: 12px;
     color: #9a9a9a;
@@ -151,27 +205,31 @@ h3 {
     margin-bottom: 18px;
 }
 
+/* summary: Klickbarer Titel eines details-Bereichs */
 .referenz-hinweis summary {
     cursor: pointer;
     color: #9a9a9a;
 }
 
+/* Text innerhalb des Referenzhinweises */
 .referenz-hinweis p {
     color: #9a9a9a;
     margin-top: 8px;
 }
 
-/* Präsentere Beschreibungstexte der Medienbereiche */
+/* .medien-text: Sichtbarer Beschreibungstext bei Medienbereichen */
 .medien-text {
     font-size: 16px;
     color: #f3efe7;
     margin-bottom: 14px;
 }
 
+/* #content: Hauptinhalt innerhalb von main */
 #content {
     padding: 30px;
 }
 
+/* .bereich: Allgemeine Box für jeden Seitenabschnitt */
 .bereich {
     background-color: #242424;
     margin-bottom: 30px;
@@ -180,39 +238,33 @@ h3 {
     border-radius: 10px;
 }
 
+/* p innerhalb von .bereich bekommt helle Textfarbe */
 .bereich p {
     color: #f3efe7;
 }
 
-/* Karten für Autos, Parfums und Düfte */
+/* .karte: Wiederverwendbare Karte für Inhalte */
 .karte {
     background-color: #151515;
     border: 1px solid #3a3a3a;
     border-radius: 10px;
     padding: 24px;
     margin: 20px 0;
+
+    /* box-shadow erzeugt einen leichten Schatten */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
+/* Hover-Effekt: Rahmen wird gold, wenn man über die Karte fährt */
 .karte:hover {
     border-color: #c9a24d;
 }
 
-/* Bereich für die drei Düfte */
-.duft-liste {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.duft-liste .karte {
-    flex: 1 1 250px;
-}
-
-/* ================================
+/*
    Medien: Bilder, SVG, Canvas, Audio, Video
-   ================================ */
+*/
 
+/* Medien sollen nie breiter als ihr Container werden */
 img,
 video,
 canvas {
@@ -220,12 +272,14 @@ canvas {
     height: auto;
 }
 
+/* Standardgestaltung für Bilder */
 img {
     display: block;
     margin: 20px auto;
     border-radius: 8px;
 }
 
+/* canvas: Gestaltung der Zeichenfläche */
 canvas {
     display: block;
     background-color: #0c0c0c;
@@ -234,11 +288,13 @@ canvas {
     margin: 20px auto;
 }
 
+/* audio: Audioplayer nimmt volle Breite ein */
 audio {
     width: 100%;
     margin-top: 15px;
 }
 
+/* video: Gestaltung der Videoplayer */
 video {
     display: block;
     margin: 20px auto;
@@ -247,10 +303,11 @@ video {
     background-color: #000000;
 }
 
-/* ================================
+/*
    Button / PDF-Download
-   ================================ */
+*/
 
+/* .button: Gestaltung des PDF-Download-Links als Button */
 .button {
     display: inline-block;
     background-color: #c9a24d;
@@ -262,16 +319,18 @@ video {
     margin-top: 10px;
 }
 
+/* Hover- und Fokus-Effekt für den Button */
 .button:hover,
 .button:focus {
     background-color: #ffffff;
     color: #000000;
 }
 
-/* ================================
+/* 
    Footer
-   ================================ */
+*/
 
+/* #footer: Fußbereich der Webseite */
 #footer {
     background-color: #000000;
     color: #f3efe7;
@@ -280,19 +339,21 @@ video {
     border-top: 2px solid #c9a24d;
 }
 
-/* ================================
+/*
    Barrierearme Fokus-Markierung
-   ================================ */
+*/
 
+/* a:focus zeigt Tastaturnutzern, welcher Link gerade ausgewählt ist */
 a:focus {
     outline: 3px solid #ffffff;
     outline-offset: 3px;
 }
 
-/* ================================
+/* 
    Responsive Anpassung
-   ================================ */
+*/
 
+/* @media: Regeln gelten nur bei Bildschirmen bis 800px Breite */
 @media screen and (max-width: 800px) {
     h1 {
         font-size: 36px;
@@ -310,6 +371,7 @@ a:focus {
         padding: 22px;
     }
 
+    /* Navigation wird auf kleinen Bildschirmen untereinander angezeigt */
     #navigation ul {
         flex-direction: column;
         align-items: stretch;
@@ -321,18 +383,21 @@ a:focus {
     }
 }
 
-
-/* ================================
+/*
    Detailkarten für Xerjoff x Lamborghini Düfte
-   ================================ */
+*/
 
+/* .duft-liste: Container für die drei Duftkarten */
 .duft-liste {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+
+    /* align-items: stretch sorgt für gleich hohe Kartenreihen */
     align-items: stretch;
 }
 
+/* .duft-detail-karte: Einzelne Duftkarte */
 .duft-detail-karte {
     display: flex;
     flex-direction: column;
@@ -344,7 +409,7 @@ a:focus {
     min-height: 120px;
 }
 
-/* Innere Box für Bild + Duftinfos */
+/* .duft-box: Innere Box mit Bild und Duftinfos */
 .duft-box {
     display: flex;
     flex-direction: column;
@@ -354,16 +419,21 @@ a:focus {
     background-color: #101010;
     border: 1px solid #333333;
     border-radius: 12px;
+
+    /* flex: 1 sorgt dafür, dass die Box den verfügbaren Platz nutzt */
     flex: 1;
 }
 
-/* Alle Duftbilder gleich groß und sauber ausgerichtet */
+/* .duft-bild: Einheitliche Darstellung der Duftbilder */
 .duft-bild {
     display: block;
     width: 100%;
     height: 220px;
+
+    /* object-fit: cover füllt die Bildfläche ohne Verzerrung */
     object-fit: cover;
     object-position: center;
+
     margin: 0;
     background-color: #000000;
     border-radius: 10px;
@@ -371,21 +441,27 @@ a:focus {
     padding: 10px;
 }
 
+/* .duft-infos: Bereich für Duftrichtung und Duftpyramide */
 .duft-infos {
     flex: 1;
 }
 
-/* Duftrichtung soll bei allen Karten gleich hoch wirken */
+/* .duftrichtung-liste: Liste der Duftcharaktere */
 .duftrichtung-liste {
     list-style-type: none;
     padding: 0;
     margin: 0 0 24px 0;
+
+    /* Flexbox ordnet die Duftrichtungen nebeneinander und umbrechend an */
     display: flex;
     flex-wrap: wrap;
     gap: 12px 18px;
+
+    /* min-height sorgt für gleichmäßige Höhe in allen Karten */
     min-height: 90px;
 }
 
+/* Einzelne Duftrichtung */
 .duftrichtung-liste li {
     display: flex;
     align-items: center;
@@ -394,6 +470,7 @@ a:focus {
     font-size: 15px;
 }
 
+/* h4 innerhalb der Duftinfos */
 .duft-infos h4 {
     font-family: Georgia, "Times New Roman", serif;
     color: #c9a24d;
@@ -402,6 +479,7 @@ a:focus {
     margin-bottom: 14px;
 }
 
+/* h5: Kleine Überschrift für Kopf-, Herz- und Basisnote */
 .duft-infos h5 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -412,14 +490,19 @@ a:focus {
     letter-spacing: 1px;
 }
 
+/* .duftpunkt: Kleines Inline-Element, das als farbiger Punkt angezeigt wird */
 .duftpunkt {
     display: inline-block;
     width: 14px;
     height: 14px;
+
+    /* border-radius: 50% macht aus dem Quadrat einen Kreis */
     border-radius: 50%;
+
     flex-shrink: 0;
 }
 
+/* Farbklassen für die verschiedenen Duftrichtungen */
 .fruchtig {
     background-color: #f48ac2;
 }
@@ -460,6 +543,7 @@ a:focus {
     background-color: #7da7f2;
 }
 
+/* .duftpyramide-block: Box für Kopfnote, Herznote oder Basisnote */
 .duftpyramide-block {
     background-color: #181818;
     border-left: 4px solid #c9a24d;
@@ -492,10 +576,11 @@ a:focus {
     }
 }
 
-/* ================================
+/*
    Markenkarte Xerjoff und Roberto Ugolini
-   ================================ */
+*/
 
+/* .markenkarte: Karte mit Text links und Logo rechts */
 .markenkarte {
     display: flex;
     align-items: center;
@@ -503,10 +588,12 @@ a:focus {
     gap: 30px;
 }
 
+/* .marken-text: Textbereich der Markenkarte */
 .marken-text {
     flex: 1;
 }
 
+/* .markenlogo: Logo bekommt feste Breite und schrumpft nicht */
 .markenlogo {
     width: 120px;
     max-width: 120px;
@@ -516,10 +603,12 @@ a:focus {
     background-color: #ffffff;
     border-radius: 8px;
     border: 1px solid #444444;
+
+    /* flex-shrink: 0 verhindert, dass das Logo zusammengedrückt wird */
     flex-shrink: 0;
 }
 
-/* Responsive: Logo unter den Text setzen */
+/* Responsive: Logo auf kleinen Bildschirmen unter den Text setzen */
 @media screen and (max-width: 800px) {
     .markenkarte {
         flex-direction: column;
@@ -531,17 +620,19 @@ a:focus {
     }
 }
 
-/* ================================
+/*
    Auto-Karten
-   ================================ */
+*/
 
+/* .auto-karten: Container für mehrere Auto-Cards */
 .auto-karten {
     display: flex;
     flex-wrap: wrap;
     gap: 28px;
 }
 
-.auto-karten {
+/* .auto-card: Einzelne Karte für ein Auto */
+.auto-card {
     flex: 1 1 420px;
     background-color: #151515;
     border: 1px solid #3a3a3a;
@@ -550,23 +641,30 @@ a:focus {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
-.auto-karten:hover {
+/* Hover-Effekt für Auto-Cards */
+.auto-card:hover {
     border-color: #c9a24d;
 }
 
+/* .auto-bild: Einheitliches Bildformat für Autos */
 .auto-bild {
     width: 100%;
     height: 250px;
+
+    /* object-fit: cover füllt die Fläche ohne Verzerrung */
     object-fit: cover;
+
     margin: 0;
     border-radius: 0;
     background-color: #f3efe7;
 }
 
+/* .auto-inhalt: Textbereich innerhalb der Auto-Card */
 .auto-inhalt {
     padding: 24px;
 }
 
+/* .auto-marke: Kleine Markenbezeichnung über dem Modellnamen */
 .auto-marke {
     color: #c9a24d;
     text-transform: uppercase;
@@ -576,13 +674,18 @@ a:focus {
     margin: 0 0 6px 0;
 }
 
+/* .auto-daten: Technische Daten als Grid */
 .auto-daten {
     display: grid;
+
+    /* Zwei gleich breite Spalten */
     grid-template-columns: 1fr 1fr;
+
     gap: 12px;
     margin: 20px 0 0 0;
 }
 
+/* Einzelne Datenbox innerhalb der technischen Daten */
 .auto-daten div {
     background-color: #101010;
     border-left: 3px solid #c9a24d;
@@ -590,6 +693,7 @@ a:focus {
     border-radius: 6px;
 }
 
+/* dt: Begriff, z. B. Motor oder Leistung */
 .auto-daten dt {
     color: #9a9a9a;
     font-size: 12px;
@@ -597,6 +701,7 @@ a:focus {
     margin-bottom: 4px;
 }
 
+/* dd: Wert zum Begriff, z. B. 800 PS */
 .auto-daten dd {
     color: #f3efe7;
     font-weight: bold;
