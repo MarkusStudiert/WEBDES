@@ -27,18 +27,6 @@
         <p>Die Geschichte einer Kultkonsole auf einer Webseite</p>
     </header>
 
-    <!-- #xxx führt zum Punkt auf der selben Webseite, href gibt das Ziel des Links an-->
-    <nav class="main-nav" aria-label="Hauptnavigation">
-        <ul>
-            <li><a href="#start">Start</a></li>
-            <li><a href="#geschichte">Geschichte</a></li>
-            <li><a href="#spiele">Spiele</a></li>
-            <li><a href="#technik">Technik</a></li>
-            <li><a href="#medien">Medien</a></li>
-            <li><a href="#fazit">Fazit</a></li>
-        </ul>
-    </nav>
-
     <main>
         <!-- Section = großer Themenbereich, article = kleiner Inhaltsbereich -->
         <section id="start" class="content-section">
@@ -179,6 +167,19 @@
             <p><a href="#oben">Zurück nach oben</a></p>
         </section>
     </main>
+
+    <!-- Die Navigation steht im HTML nach main, damit sie ohne z-index über Medien-Elementen liegen kann. CSS Grid zeigt sie trotzdem oben an. -->
+    <!-- #xxx führt zum Punkt auf der selben Webseite, href gibt das Ziel des Links an-->
+    <nav class="main-nav" aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="#start">Start</a></li>
+            <li><a href="#geschichte">Geschichte</a></li>
+            <li><a href="#spiele">Spiele</a></li>
+            <li><a href="#technik">Technik</a></li>
+            <li><a href="#medien">Medien</a></li>
+            <li><a href="#fazit">Fazit</a></li>
+        </ul>
+    </nav>
 
     <!-- footer enthält den unteren Abschlussbereich der Webseite -->
     <footer class="site-footer">
