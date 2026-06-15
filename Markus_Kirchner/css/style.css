@@ -413,7 +413,7 @@ h3 {
 #schachCanvas {
     display: block;
     width: 100%;
-    max-width: 260px;
+    max-width: 350px;
     height: auto;
     margin: 0 auto;
 
