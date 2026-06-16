@@ -17,7 +17,6 @@
   --trans:      0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -79,7 +78,6 @@ body {
   margin-top: 0.3rem;
 }
 
-/* Rote Akzent-Linie unter Header */
 .site-header::after {
   content: '';
   display: block;
@@ -90,9 +88,6 @@ body {
   border-radius: 2px;
 }
 
-/* ═══════════════════════════════════════════
-   MAIN STAGE (SVG + Info-Panel)
-═══════════════════════════════════════════ */
 .main-stage {
   position: relative;
   z-index: 1;
@@ -213,9 +208,7 @@ body {
   font-weight: 600;
 }
 
-/* ═══════════════════════════════════════════
-   SECTION STYLES (Canvas / Audio / Video)
-═══════════════════════════════════════════ */
+/* canvas-section */
 .canvas-section,
 .media-section {
   position: relative;
@@ -373,9 +366,6 @@ video {
   color: #fff;
 }
 
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
 .site-footer {
   position: relative;
   z-index: 1;
@@ -388,9 +378,6 @@ video {
   letter-spacing: 0.05em;
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════ */
 @media (max-width: 900px) {
   .main-stage {
     grid-template-columns: 1fr;
